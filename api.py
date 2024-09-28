@@ -33,10 +33,14 @@ def warn_anomalies():
           'message': 'Anomalies found in POS data, please check dashboards for insights',
           'anomaly_types': ','.join(anomaly_types),
           'auth_key': 'None'
-      }    
+      }   
 
+      #Removing duplicates 
+      anomaly_types = list(dict.fromkeys(anomaly_types))
       # fictional url will doesn't exist, skip any errors
-      try: requests.post(fictional_url, headers=headers)
+      try: 
+        requests.post(fictional_url, headers=headers)
+        anomaly_types=[]
       except: pass
     
     else:pass
