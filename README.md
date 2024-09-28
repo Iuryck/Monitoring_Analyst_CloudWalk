@@ -27,3 +27,5 @@ First task involves CSV files *checkout* 1 and 2, second task involves CSV files
   The Dashboard in the Dash app has a line plot, updated with a live stream from the Flask API, with pin-point bars/lines indicating where and when anomalies have occured. **Flask API has to run first before this python file**
   
 
+# Warning
+  The API and Dash app have a problem of random and subtle freeze (at least I had it). In case the Dash dashboard stops working, or doesn't work on a first start, try restarting both.
